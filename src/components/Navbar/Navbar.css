@@ -1,0 +1,123 @@
+nav {
+  background: var(--gradient);
+  box-shadow: var(--light-shadow);
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-font-1);
+  margin-right: 20px;
+  background-color: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  color: var(--clr-hover);
+  transform: rotate(-90deg);
+}
+
+.logo {
+  height: 80px;
+}
+
+.links {
+  list-style-type: none;
+  font-family: var(--font);
+  padding-left: 1.5rem;
+}
+
+.links a {
+  color: var(--clr-font-1);
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: block;
+  padding: 0.5rem 0;
+  transition: var(--transition);
+  text-decoration: none;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.links a:hover {
+  background-color: var(--clr-hover);
+  color: black;
+  padding-left: 1.5rem;
+}
+
+.social-icons {
+  display: none;
+}
+
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.show-container {
+  height: 10rem;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .links-container {
+    height: auto !important;
+  }
+
+  ul {
+    margin-bottom: 0 !important;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 1.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+    color: var(--clr-hover);
+  }
+
+  .social-icons {
+    font-size: 1.4rem;
+    display: flex;
+    list-style-type: none;
+  }
+  .social-icons a {
+    margin: 0 1.1rem;
+    color: var(--clr-font-1);
+    transition: var(--transition);
+  }
+  .social-icons a:hover {
+    color: var(--clr-hover);
+  }
+}

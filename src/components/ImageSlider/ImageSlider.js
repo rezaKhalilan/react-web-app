@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ImageSliderData } from "./ImageSliderData";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import "./ImageSlider.css";
@@ -16,14 +16,14 @@ const ImageSlider = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const newCurrent = current > length - 1 ? 0 : current + 1;
-      setCurrent(newCurrent);
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     const newCurrent = current > length - 1 ? 0 : current + 1;
+  //     setCurrent(newCurrent);
+  //   }, 5000);
 
-    return () => clearTimeout(timer);
-  }, [current]);
+  //   return () => clearTimeout(timer);
+  // }, [current]);
 
   return (
     <section className="slider">
